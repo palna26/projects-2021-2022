@@ -1,0 +1,25 @@
+Did you attempt to make your computer player very smart -- i.e., do something more clever than just pick a random legal move?
+Yes,  the computer always checks before randomly generating a move if it can make a smart move first.
+If there are already 3 yellow tokens and a none spot, it will place the token in the none spot to win. 
+This will work no matter where the none sport is in the list of 4 yellow tokens. 
+
+If so, were you able to accomplish this? Is your computer player as smart as you would like?
+I utilized for loops to check the rows and columns and register if it ever finds 3 tokens and a None spot in any order.
+It then checks if all 3 tokens found are yellow tokens. If they are, the function will return the coordinates of the None spot,
+and therefore, win the game by getting four in a row.
+If there is no such sequence, then it just returns random coordinates for the next computer token. 
+
+How did you determine which piece to play next? Tell us about your “pick next move” algorithm
+It first checks for a place it can put a yellow token for a horizontal win, then a vertical win, then a positive slope win.
+If none of these exist then it will simply just pick a random location.
+
+How often did your computer program beat you, or your friends, or whoever tested it out for you?
+The computer was good at winning over the user when there were more chips placed on the board. 
+At first it is completely random so the chances are low. 
+But as more yellow chips are placed on the board, there are more opportunities for the computer to make a smart move rather than random one.
+
+How would you improve it in the future?
+Right now, the AI only checks for only vertical wins, horizontal wins, and positive slope wins. 
+Because of the complications of indexing, I was not successful in making it work for negative slope wins, so I would improve this. 
+Additionally, instead of waiting till it randomly places 3 out of the potential 4 in the row, 
+maybe I would just wait till it randomly places 2 out of the potential 4 in the row and then make a smart move for both the third and fourt token.
